@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Тойға шақыру</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&family=Yeseva+One&family=Marck+Script&display=swap');
 
 :root{
   --bg:#14100e;
@@ -126,12 +126,12 @@ body{
 #cover.hide{opacity:0;visibility:hidden;pointer-events:none;}
 #cover .cover-inner{text-align:center;padding:40px;position:relative;animation:popIn .9s ease both;}
 #cover .eyebrow{
-  font-size:13px;letter-spacing:.12em;color:var(--amber-light);margin-bottom:18px;
+  font-size:15px;letter-spacing:.16em;color:var(--amber-light);margin-bottom:20px;
 }
 #cover h1{
-  font-family:'Cormorant Garamond',serif;
-  font-weight:500;
-  font-size:clamp(30px,7vw,42px);
+  font-family:'Yeseva One',serif;
+  font-weight:400;
+  font-size:clamp(38px,9vw,54px);
   background:linear-gradient(90deg, var(--rose-light), var(--gold-light) 40%, var(--sapphire-light) 80%);
   background-size:200% auto;
   -webkit-background-clip:text;
@@ -139,18 +139,18 @@ body{
   color:transparent;
   animation:hueDrift 6s ease-in-out infinite;
   line-height:1.25;
-  margin-bottom:8px;
+  margin-bottom:10px;
 }
 #cover .sub{
-  font-family:'Cormorant Garamond',serif;
-  font-style:italic;
-  font-size:19px;
+  font-family:'Marck Script',cursive;
+  font-style:normal;
+  font-size:26px;
   color:var(--muted);
   margin-bottom:34px;
 }
 #openBtn{
   font-family:'Jost',sans-serif;
-  font-size:13px;
+  font-size:15px;
   letter-spacing:.14em;
   color:var(--bg);
   background:linear-gradient(135deg,var(--rose-light),var(--gold-light),var(--amber));
@@ -207,12 +207,12 @@ main > .wrap{position:relative;z-index:1;}
 section{padding:56px 0 0;text-align:center;position:relative;}
 
 .eyebrow{
-  font-size:12px;letter-spacing:.16em;color:var(--amber-light);margin-bottom:14px;
+  font-size:14px;letter-spacing:.18em;color:var(--amber-light);margin-bottom:16px;
 }
 .title-xl{
-  font-family:'Cormorant Garamond',serif;
-  font-weight:500;
-  font-size:clamp(38px,9vw,54px);
+  font-family:'Yeseva One',serif;
+  font-weight:400;
+  font-size:clamp(44px,10vw,62px);
   line-height:1.15;
   background:linear-gradient(90deg, var(--gold-light), var(--rose-light) 50%, var(--gold-light));
   background-size:220% auto;
@@ -223,22 +223,23 @@ section{padding:56px 0 0;text-align:center;position:relative;}
 }
 .title-xl em{font-style:italic;color:var(--sapphire-light);font-weight:400;-webkit-text-fill-color:var(--sapphire-light);}
 .names{
-  font-family:'Cormorant Garamond',serif;
-  font-size:clamp(26px,6vw,32px);
-  font-style:italic;
+  font-family:'Marck Script',cursive;
+  font-size:clamp(32px,7.5vw,40px);
+  font-style:normal;
   color:var(--rose-light);
-  margin-top:10px;
+  margin-top:12px;
 }
 .date-big{
   margin-top:26px;
   font-family:'Cormorant Garamond',serif;
-  font-size:22px;
+  font-weight:600;
+  font-size:26px;
   letter-spacing:.05em;
   color:var(--amber-light);
 }
 
 .invite-text{
-  font-size:16px;
+  font-size:18px;
   line-height:1.85;
   color:var(--cream);
   font-weight:300;
@@ -249,7 +250,8 @@ section{padding:56px 0 0;text-align:center;position:relative;}
 .hosts{
   font-family:'Cormorant Garamond',serif;
   font-style:italic;
-  font-size:22px;
+  font-weight:600;
+  font-size:25px;
   color:var(--emerald-light);
   line-height:1.6;
 }
@@ -257,8 +259,8 @@ section{padding:56px 0 0;text-align:center;position:relative;}
   display:block;
   font-family:'Jost',sans-serif;
   font-style:normal;
-  font-size:12px;
-  letter-spacing:.16em;
+  font-size:13px;
+  letter-spacing:.18em;
   color:var(--muted);
   margin-bottom:10px;
 }
@@ -282,8 +284,8 @@ section{padding:56px 0 0;text-align:center;position:relative;}
 .cd-box:nth-child(3){--glow: rgba(79,191,154,.45); border-color: rgba(79,191,154,.4); animation-delay:.8s;}
 .cd-box:nth-child(4){--glow: rgba(255,207,128,.45); border-color: rgba(255,207,128,.4); animation-delay:1.2s;}
 .cd-num{
-  font-family:'Cormorant Garamond',serif;
-  font-size:32px;
+  font-family:'Yeseva One',serif;
+  font-size:38px;
   color:var(--gold-light);
   line-height:1;
 }
@@ -292,10 +294,10 @@ section{padding:56px 0 0;text-align:center;position:relative;}
 .cd-box:nth-child(3) .cd-num{color:var(--emerald-light);}
 .cd-box:nth-child(4) .cd-num{color:var(--amber-light);}
 .cd-label{
-  font-size:10px;
+  font-size:11px;
   letter-spacing:.1em;
   color:var(--muted);
-  margin-top:8px;
+  margin-top:9px;
 }
 
 /* schedule */
@@ -310,27 +312,28 @@ section{padding:56px 0 0;text-align:center;position:relative;}
 .sched-row:last-child{border-bottom:none;}
 .sched-time{
   font-family:'Cormorant Garamond',serif;
-  font-size:24px;
+  font-weight:600;
+  font-size:28px;
   color:var(--gold);
-  min-width:64px;
+  min-width:68px;
 }
 .sched-row:nth-child(4n+1) .sched-time{color:var(--rose-light);}
 .sched-row:nth-child(4n+2) .sched-time{color:var(--sapphire-light);}
 .sched-row:nth-child(4n+3) .sched-time{color:var(--emerald-light);}
 .sched-row:nth-child(4n+4) .sched-time{color:var(--amber-light);}
-.sched-label{font-size:14px;color:var(--cream);font-weight:300;line-height:1.5;}
+.sched-label{font-size:16px;color:var(--cream);font-weight:300;line-height:1.5;}
 
 /* location */
 .venue-name{
-  font-family:'Cormorant Garamond',serif;
-  font-size:26px;
+  font-family:'Yeseva One',serif;
+  font-size:29px;
   color:var(--sapphire-light);
-  margin-bottom:6px;
+  margin-bottom:8px;
 }
-.venue-addr{font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:22px;}
+.venue-addr{font-size:15px;color:var(--muted);line-height:1.7;margin-bottom:22px;}
 .map-link{
   display:inline-block;
-  font-size:12px;
+  font-size:13px;
   letter-spacing:.12em;
   color:var(--bg);
   background:linear-gradient(120deg, var(--amber), var(--gold-light));
@@ -353,10 +356,11 @@ section{padding:56px 0 0;text-align:center;position:relative;}
 }
 .gallery img:hover{border-color:var(--rose-light);transform:scale(1.015);}
 .gallery-note{
-  font-size:12px;
+  font-family:'Marck Script',cursive;
+  font-size:20px;
   color:var(--emerald-light);
   margin-top:12px;
-  font-style:italic;
+  font-style:normal;
 }
 .gallery-grid{display:flex;flex-direction:column;gap:14px;}
 .gallery-slot{
@@ -366,7 +370,7 @@ section{padding:56px 0 0;text-align:center;position:relative;}
   border-radius:3px;
   display:flex;align-items:center;justify-content:center;
   color:var(--muted);
-  font-size:12px;
+  font-size:13px;
   letter-spacing:.04em;
   text-align:center;
   padding:12px;
@@ -377,10 +381,10 @@ section{padding:56px 0 0;text-align:center;position:relative;}
 .gallery-slot:hover img{transform:scale(1.03);}
 
 /* rsvp */
-.rsvp-text{font-size:15px;line-height:1.8;color:var(--cream);max-width:400px;margin:0 auto 18px;}
+.rsvp-text{font-size:17px;line-height:1.8;color:var(--cream);max-width:400px;margin:0 auto 18px;}
 .rsvp-phone{
-  font-family:'Cormorant Garamond',serif;
-  font-size:24px;
+  font-family:'Yeseva One',serif;
+  font-size:27px;
   color:var(--emerald-light);
   letter-spacing:.03em;
 }
@@ -399,7 +403,7 @@ section{padding:56px 0 0;text-align:center;position:relative;}
   border-radius:3px;
   color:var(--cream);
   font-family:'Jost',sans-serif;
-  font-size:14px;
+  font-size:16px;
   font-weight:300;
   outline:none;
   transition:border-color .3s ease;
@@ -408,7 +412,7 @@ section{padding:56px 0 0;text-align:center;position:relative;}
 .rsvp-input:focus{border-color:var(--sapphire-light);box-shadow:0 0 10px rgba(125,157,232,.25);}
 .rsvp-submit{
   font-family:'Jost',sans-serif;
-  font-size:13px;
+  font-size:15px;
   letter-spacing:.1em;
   color:var(--bg);
   background:linear-gradient(135deg,var(--rose-light),var(--gold-light),var(--emerald-light));
@@ -421,16 +425,16 @@ section{padding:56px 0 0;text-align:center;position:relative;}
 }
 .rsvp-submit:hover{transform:translateY(-1px);background-position:right center;box-shadow:0 6px 18px rgba(199,161,90,.3);}
 .rsvp-submit:disabled{opacity:.6;cursor:default;transform:none;}
-.rsvp-status{font-size:13px;color:var(--muted);min-height:18px;}
+.rsvp-status{font-size:15px;color:var(--muted);min-height:18px;}
 .rsvp-status.ok{color:var(--emerald-light);}
 .rsvp-status.err{color:var(--rose-light);}
 
 /* footer */
 footer{padding:50px 0 60px;text-align:center;}
 footer .fx{
-  font-family:'Cormorant Garamond',serif;
-  font-style:italic;
-  font-size:18px;
+  font-family:'Marck Script',cursive;
+  font-style:normal;
+  font-size:26px;
   background:linear-gradient(90deg, var(--rose-light), var(--sapphire-light), var(--emerald-light));
   background-size:200% auto;
   -webkit-background-clip:text;
