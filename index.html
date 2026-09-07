@@ -114,7 +114,8 @@ body{
 
 /* ---------- cover ---------- */
 #cover{
-  position:fixed;inset:0;z-index:50;
+  position:relative;
+  min-height:92vh;
   display:flex;align-items:center;justify-content:center;flex-direction:column;
   background:
     radial-gradient(ellipse at 20% 10%, rgba(240,138,160,0.28) 0%, transparent 40%),
@@ -122,9 +123,7 @@ body{
     radial-gradient(ellipse at 50% 90%, rgba(47,157,124,0.14) 0%, transparent 45%),
     radial-gradient(ellipse at 50% 20%, #fff0f4 0%, var(--bg) 60%),
     var(--bg);
-  transition:opacity .9s ease, visibility .9s ease;
 }
-#cover.hide{opacity:0;visibility:hidden;pointer-events:none;}
 #cover .cover-inner{text-align:center;padding:40px;position:relative;animation:popIn .9s ease both;}
 #cover .eyebrow{
   font-size:15px;letter-spacing:.16em;color:var(--amber-light);margin-bottom:20px;
@@ -147,29 +146,27 @@ body{
   font-style:normal;
   font-size:26px;
   color:var(--muted);
-  margin-bottom:34px;
+  margin-bottom:10px;
 }
-#openBtn{
-  font-family:'Jost',sans-serif;
-  font-size:15px;
+.scroll-hint{
+  margin-top:24px;
+  font-size:12px;
   letter-spacing:.14em;
-  color:#fff;
-  background:linear-gradient(135deg,var(--rose-light),var(--gold-light),var(--amber));
-  background-size:200% auto;
-  border:none;
-  padding:15px 40px;
-  border-radius:2px;
-  cursor:pointer;
-  position:relative;
-  transition:transform .35s ease, box-shadow .35s ease, background-position .6s ease;
-  box-shadow:0 8px 24px rgba(199,161,90,.25);
-  animation:shimmer 2.6s ease-in-out infinite;
+  color:var(--muted);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:6px;
+  animation:bounceDown 2s ease-in-out infinite;
 }
-#openBtn:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 12px 30px rgba(181,56,79,.35);background-position:right center;}
+.scroll-hint svg{width:16px;height:16px;}
+@keyframes bounceDown{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(6px);}
+}
 
 /* ---------- sections ---------- */
-main{opacity:0;transition:opacity 1s ease;position:relative;}
-main.show{opacity:1;}
+main{opacity:1;position:relative;}
 
 /* ---------- background photos (после АШУ, примерно до середины) ---------- */
 .bg-photos{
@@ -492,12 +489,15 @@ footer .fx{
   <div class="cover-inner">
     <div class="eyebrow">Сізге арнайы шақыру бар</div>
     <h1> ❗️!<br>Аяулы анамыз Әлияның 70 жас мерейтойы және балаларымыз Асыл мен Арыстанның сүндет тойы. </h1>
-    <div class="sub">Шақыруды көру үшін төмендегі түймені басыңыз</div>
-    <button id="openBtn">АШУ</button>
+    <div class="sub">Толығырақ көру үшін төмен қарай жылжытыңыз</div>
+    <div class="scroll-hint">
+      <span>ТӨМЕН ҚАРАЙ</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 4v14M6 12l6 6 6-6"/></svg>
+    </div>
   </div>
 </div>
 
-<main id="main">
+<main id="main" class="show">
 
   <!-- ФОНОВЫЕ ФОТО: вставьте свои ссылки в src ниже. Можно 1-3 картинки —
        они лежат друг на друге, верхняя (последняя в списке) перекрывает предыдущие.
@@ -584,8 +584,6 @@ footer .fx{
   <div class="orn"><div class="rule"></div><svg viewBox="0 0 34 16"><path d="M17 8 C 12 -2, 2 2, 2 8 C 2 14, 12 18, 17 8 C 22 -2, 32 2, 32 8 C 32 14, 22 18, 17 8 Z" fill="none" stroke="#c7a15a" stroke-width="1"/></svg><div class="rule"></div></div>
 
   <section class="reveal">
-    <p class="rsvp-text">Құрметті қонақтар, тойға келу-келмеуіңізді алдын ала хабарласуыңызды сұраймыз:</p>
-    <div class="rsvp-phone">+7759793494</div>
 
     <form class="rsvp-form" id="rsvpForm">
       <input class="rsvp-input" type="text" id="guestName" placeholder="Атыңызды жазыңыз / Ваше имя" required maxlength="80">
@@ -607,21 +605,13 @@ footer .fx{
 </button>
 <audio id="bgAudio" loop preload="none">
   <!-- Мұнда өз әндеріңіздің тікелей mp3 сілтемесін қойыңыз (мысалы Dropbox raw=1 сілтемесі) -->
-  <source src="" type="audio/mpeg">
+  <source src="https://raw.githubusercontent.com/bqbaqlet-sketch/priglos/main/1788760620706505.m4a" type="audio/mp4">
+
 </audio>
 
 <script>
-// ---- cover open ----
-document.getElementById('openBtn').addEventListener('click', function(){
-  document.getElementById('cover').classList.add('hide');
-  document.getElementById('main').classList.add('show');
-  var audio = document.getElementById('bgAudio');
-  if(audio.querySelector('source').src){
-    audio.play().catch(function(){});
-    document.getElementById('musicBtn').classList.add('spinning');
-  }
-  setTimeout(revealOnScroll, 100);
-});
+// ---- scroll reveal (runs immediately, no click needed) ----
+revealOnScroll();
 
 // ---- scroll reveal ----
 function revealOnScroll(){
