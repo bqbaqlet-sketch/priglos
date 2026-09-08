@@ -31,7 +31,9 @@
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;}
 body{
+  font-size:19px;
   background:
     radial-gradient(ellipse at 15% -10%, rgba(88,117,201,0.10) 0%, transparent 45%),
     radial-gradient(ellipse at 85% 10%, rgba(240,138,160,0.22) 0%, transparent 45%),
@@ -126,12 +128,12 @@ body{
 }
 #cover .cover-inner{text-align:center;padding:40px;position:relative;animation:popIn .9s ease both;}
 #cover .eyebrow{
-  font-size:15px;letter-spacing:.16em;color:var(--amber-light);margin-bottom:20px;
+  font-size:20px;letter-spacing:.14em;color:var(--amber-light);margin-bottom:20px;
 }
 #cover h1{
   font-family:'Yeseva One',serif;
   font-weight:400;
-  font-size:clamp(38px,9vw,54px);
+  font-size:clamp(46px,12vw,64px);
   background:linear-gradient(90deg, var(--rose-light), var(--gold-light) 40%, var(--sapphire-light) 80%);
   background-size:200% auto;
   -webkit-background-clip:text;
@@ -144,38 +146,21 @@ body{
 #cover .sub{
   font-family:'Marck Script',cursive;
   font-style:normal;
-  font-size:26px;
+  font-size:32px;
   color:var(--muted);
   margin-bottom:10px;
 }
 .scroll-hint{
-  margin-top:28px;
-  font-family:'Jost',sans-serif;
-  font-size:12px;
-  font-weight:500;
-  letter-spacing:.14em;
-  color:var(--gold);
+  margin-top:24px;
+  font-size:16px;
+  letter-spacing:.1em;
+  color:var(--muted);
   display:flex;
   flex-direction:column;
   align-items:center;
   gap:6px;
-  cursor:pointer;
-  background:var(--panel);
-  border:1px solid var(--line);
-  border-radius:30px;
-  padding:14px 26px;
-  box-shadow:0 6px 18px rgba(199,161,90,.18);
   animation:bounceDown 2s ease-in-out infinite;
-  transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
 }
-.scroll-hint:hover{
-  transform:translateY(-2px) scale(1.04);
-  box-shadow:0 10px 24px rgba(199,161,90,.3);
-  background:linear-gradient(135deg,var(--rose-light),var(--gold-light),var(--amber));
-  color:#fff;
-  border-color:transparent;
-}
-.scroll-hint:active{transform:translateY(0) scale(.97);}
 .scroll-hint svg{width:16px;height:16px;}
 @keyframes bounceDown{
   0%,100%{transform:translateY(0);}
@@ -222,12 +207,12 @@ main > .wrap{position:relative;z-index:1;}
 section{padding:56px 0 0;text-align:center;position:relative;}
 
 .eyebrow{
-  font-size:14px;letter-spacing:.18em;color:var(--amber-light);margin-bottom:16px;
+  font-size:19px;letter-spacing:.14em;color:var(--amber-light);margin-bottom:16px;
 }
 .title-xl{
   font-family:'Yeseva One',serif;
   font-weight:400;
-  font-size:clamp(44px,10vw,62px);
+  font-size:clamp(48px,13vw,66px);
   line-height:1.15;
   background:linear-gradient(90deg, var(--gold-light), var(--rose-light) 50%, var(--gold-light));
   background-size:220% auto;
@@ -239,7 +224,7 @@ section{padding:56px 0 0;text-align:center;position:relative;}
 .title-xl em{font-style:italic;color:var(--sapphire-light);font-weight:400;-webkit-text-fill-color:var(--sapphire-light);}
 .names{
   font-family:'Marck Script',cursive;
-  font-size:clamp(32px,7.5vw,40px);
+  font-size:clamp(36px,9vw,46px);
   font-style:normal;
   color:var(--rose-light);
   margin-top:12px;
@@ -248,17 +233,17 @@ section{padding:56px 0 0;text-align:center;position:relative;}
   margin-top:26px;
   font-family:'Cormorant Garamond',serif;
   font-weight:600;
-  font-size:26px;
+  font-size:32px;
   letter-spacing:.05em;
   color:var(--amber-light);
 }
 
 .invite-text{
-  font-size:18px;
-  line-height:1.85;
+  font-size:23px;
+  line-height:1.8;
   color:var(--cream);
-  font-weight:300;
-  max-width:440px;
+  font-weight:400;
+  max-width:480px;
   margin:0 auto;
 }
 
@@ -266,7 +251,7 @@ section{padding:56px 0 0;text-align:center;position:relative;}
   font-family:'Cormorant Garamond',serif;
   font-style:italic;
   font-weight:600;
-  font-size:25px;
+  font-size:30px;
   color:var(--emerald-light);
   line-height:1.6;
 }
@@ -274,7 +259,7 @@ section{padding:56px 0 0;text-align:center;position:relative;}
   display:block;
   font-family:'Jost',sans-serif;
   font-style:normal;
-  font-size:13px;
+  font-size:17px;
   letter-spacing:.18em;
   color:var(--muted);
   margin-bottom:10px;
@@ -300,7 +285,7 @@ section{padding:56px 0 0;text-align:center;position:relative;}
 .cd-box:nth-child(4){--glow: rgba(255,207,128,.45); border-color: rgba(255,207,128,.4); animation-delay:1.2s;}
 .cd-num{
   font-family:'Yeseva One',serif;
-  font-size:38px;
+  font-size:44px;
   color:var(--gold-light);
   line-height:1;
 }
@@ -309,8 +294,8 @@ section{padding:56px 0 0;text-align:center;position:relative;}
 .cd-box:nth-child(3) .cd-num{color:var(--emerald-light);}
 .cd-box:nth-child(4) .cd-num{color:var(--amber-light);}
 .cd-label{
-  font-size:11px;
-  letter-spacing:.1em;
+  font-size:14px;
+  letter-spacing:.08em;
   color:var(--muted);
   margin-top:9px;
 }
@@ -328,27 +313,27 @@ section{padding:56px 0 0;text-align:center;position:relative;}
 .sched-time{
   font-family:'Cormorant Garamond',serif;
   font-weight:600;
-  font-size:28px;
+  font-size:32px;
   color:var(--gold);
-  min-width:68px;
+  min-width:82px;
 }
 .sched-row:nth-child(4n+1) .sched-time{color:var(--rose-light);}
 .sched-row:nth-child(4n+2) .sched-time{color:var(--sapphire-light);}
 .sched-row:nth-child(4n+3) .sched-time{color:var(--emerald-light);}
 .sched-row:nth-child(4n+4) .sched-time{color:var(--amber-light);}
-.sched-label{font-size:16px;color:var(--cream);font-weight:300;line-height:1.5;}
+.sched-label{font-size:20px;color:var(--cream);font-weight:400;line-height:1.5;}
 
 /* location */
 .venue-name{
   font-family:'Yeseva One',serif;
-  font-size:29px;
+  font-size:34px;
   color:var(--sapphire-light);
   margin-bottom:8px;
 }
-.venue-addr{font-size:15px;color:var(--muted);line-height:1.7;margin-bottom:22px;}
+.venue-addr{font-size:19px;color:var(--muted);line-height:1.7;margin-bottom:22px;}
 .map-link{
   display:inline-block;
-  font-size:13px;
+  font-size:17px;
   letter-spacing:.12em;
   color:#fff;
   background:linear-gradient(120deg, var(--amber), var(--gold-light));
@@ -372,7 +357,7 @@ section{padding:56px 0 0;text-align:center;position:relative;}
 .gallery img:hover{border-color:var(--rose-light);transform:scale(1.015);}
 .gallery-note{
   font-family:'Marck Script',cursive;
-  font-size:20px;
+  font-size:24px;
   color:var(--emerald-light);
   margin-top:12px;
   font-style:normal;
@@ -385,7 +370,7 @@ section{padding:56px 0 0;text-align:center;position:relative;}
   border-radius:3px;
   display:flex;align-items:center;justify-content:center;
   color:var(--muted);
-  font-size:13px;
+  font-size:17px;
   letter-spacing:.04em;
   text-align:center;
   padding:12px;
@@ -396,10 +381,10 @@ section{padding:56px 0 0;text-align:center;position:relative;}
 .gallery-slot:hover img{transform:scale(1.03);}
 
 /* rsvp */
-.rsvp-text{font-size:17px;line-height:1.8;color:var(--cream);max-width:400px;margin:0 auto 18px;}
+.rsvp-text{font-size:22px;line-height:1.75;color:var(--cream);max-width:440px;margin:0 auto 18px;}
 .rsvp-phone{
   font-family:'Yeseva One',serif;
-  font-size:27px;
+  font-size:34px;
   color:var(--emerald-light);
   letter-spacing:.03em;
 }
@@ -418,8 +403,8 @@ section{padding:56px 0 0;text-align:center;position:relative;}
   border-radius:3px;
   color:var(--cream);
   font-family:'Jost',sans-serif;
-  font-size:16px;
-  font-weight:300;
+  font-size:19px;
+  font-weight:400;
   outline:none;
   transition:border-color .3s ease;
 }
@@ -427,8 +412,8 @@ section{padding:56px 0 0;text-align:center;position:relative;}
 .rsvp-input:focus{border-color:var(--sapphire-light);box-shadow:0 0 10px rgba(125,157,232,.25);}
 .rsvp-submit{
   font-family:'Jost',sans-serif;
-  font-size:15px;
-  letter-spacing:.1em;
+  font-size:18px;
+  letter-spacing:.08em;
   color:#fff;
   background:linear-gradient(135deg,var(--rose-light),var(--gold-light),var(--emerald-light));
   background-size:220% auto;
@@ -440,7 +425,7 @@ section{padding:56px 0 0;text-align:center;position:relative;}
 }
 .rsvp-submit:hover{transform:translateY(-1px);background-position:right center;box-shadow:0 6px 18px rgba(199,161,90,.3);}
 .rsvp-submit:disabled{opacity:.6;cursor:default;transform:none;}
-.rsvp-status{font-size:15px;color:var(--muted);min-height:18px;}
+.rsvp-status{font-size:18px;color:var(--muted);min-height:18px;}
 .rsvp-status.ok{color:var(--emerald-light);}
 .rsvp-status.err{color:var(--rose-light);}
 
@@ -449,7 +434,7 @@ footer{padding:50px 0 60px;text-align:center;}
 footer .fx{
   font-family:'Marck Script',cursive;
   font-style:normal;
-  font-size:26px;
+  font-size:32px;
   background:linear-gradient(90deg, var(--rose-light), var(--sapphire-light), var(--emerald-light));
   background-size:200% auto;
   -webkit-background-clip:text;
@@ -484,8 +469,8 @@ footer .fx{
 @keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
 
 @media (max-width:420px){
-  .cd-box{width:66px;padding:13px 0 10px;}
-  .cd-num{font-size:26px;}
+  .cd-box{width:72px;padding:14px 0 10px;}
+  .cd-num{font-size:34px;}
 }
 
 .reveal{opacity:0;transform:translateY(16px) scale(.98);transition:opacity .8s ease, transform .8s ease;}
@@ -504,10 +489,9 @@ footer .fx{
   <div class="corner bl"><svg viewBox="0 0 46 46"><path d="M4 4 C 4 20, 20 4, 30 4 M4 4 C 20 4, 4 20, 4 30" stroke="#c7a15a" stroke-width="1.4" fill="none"/></svg></div>
   <div class="corner br"><svg viewBox="0 0 46 46"><path d="M4 4 C 4 20, 20 4, 30 4 M4 4 C 20 4, 4 20, 4 30" stroke="#c7a15a" stroke-width="1.4" fill="none"/></svg></div>
   <div class="cover-inner">
-    <div class="eyebrow">Сізге арнайы шақыру бар</div>
-    <h1> ❗️!<br>Аяулы анамыз Әлияның 70 жас мерейтойы және балаларымыз Асыл мен Арыстанның сүндет тойы. </h1>
+    <h1>Аяулы анамыз Әлияның 70 жас мерейтойы және балаларымыз Асыл мен Арыстанның сүндет тойы. </h1>
     <div class="sub">Толығырақ көру үшін төмен қарай жылжытыңыз</div>
-    <div class="scroll-hint" id="scrollHint">
+    <div class="scroll-hint">
       <span>ТӨМЕН ҚАРАЙ</span>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 4v14M6 12l6 6 6-6"/></svg>
     </div>
@@ -640,18 +624,6 @@ function revealOnScroll(){
   }, {threshold:0.15});
   els.forEach(function(el){ io.observe(el); });
 }
-
-// ---- scroll hint: start music + scroll down ----
-document.getElementById('scrollHint').addEventListener('click', function(){
-  var audio = document.getElementById('bgAudio');
-  var src = audio.querySelector('source').src;
-  if(src && audio.paused){
-    audio.play().catch(function(){});
-    document.getElementById('musicBtn').classList.add('spinning');
-  }
-  var main = document.getElementById('main');
-  main.scrollIntoView({behavior:'smooth', block:'start'});
-});
 
 // ---- music toggle ----
 document.getElementById('musicBtn').addEventListener('click', function(){
